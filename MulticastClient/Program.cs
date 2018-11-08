@@ -15,7 +15,6 @@ namespace MulticastClient
             UdpClient client = new UdpClient(20000);
             client.JoinMulticastGroup(IPAddress.Parse("224.0.0.0"));
             client.EnableBroadcast = false;
-            client.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.Broadcast, false);
             IPEndPoint endPoint = null;
             Console.WriteLine("Multicast client started");
             while(true)
